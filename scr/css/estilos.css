@@ -1,0 +1,39 @@
+body {
+background-color: #272727;    
+}
+
+.qr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .gerar {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    background-color: #00a000;
+    color: #ffffff;
+    cursor: pointer;
+    width: 350px;
+    height: 9vh;
+  }
+  
+  .gerar_anterior {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    background-color: #505050;
+    color: #ffffff;
+    cursor: pointer;
+    width: 350px;
+    height: 10vh;
+  }
+  
