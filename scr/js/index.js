@@ -2,7 +2,9 @@ let botaoGerar = document.querySelector(".gerar");
 let botaoVoltar = document.querySelector(".gerar_anterior")
 var qrCode = document.getElementById("gerador");
 var sequenciaFinal = 0;
-let pressionado = false; 
+let pressionado = false;
+var contagemFichas = 0
+let adicionarMais = document.querySelector(".totalFichas")
 
 botaoGerar.addEventListener("click", function() {
     if (!pressionado) {
