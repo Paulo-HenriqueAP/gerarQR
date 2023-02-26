@@ -36,4 +36,12 @@ background-color: #272727;
     width: 350px;
     height: 10vh;
   }
+
+.totalFichas {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    color: #ffffff;
+    width: 170px;
+    height: 2vh;
+  }
   
