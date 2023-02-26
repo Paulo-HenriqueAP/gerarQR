@@ -25,7 +25,7 @@ background-color: #272727;
   
   .gerar_anterior {
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Press Start 2P', cursive;
