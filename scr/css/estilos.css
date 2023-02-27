@@ -44,4 +44,12 @@ background-color: #272727;
     width: 170px;
     height: 2vh;
   }
+
+ .idFicha {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    color: #484848;
+    position: absolute;
+    bottom: 0%;
+  }
   
