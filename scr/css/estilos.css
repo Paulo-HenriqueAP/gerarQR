@@ -37,7 +37,7 @@ background-color: #272727;
     height: 10vh;
   }
 
-.totalFichas {
+  .totalFichas {
     font-family: 'Press Start 2P', cursive;
     font-size: 8px;
     color: #ffffff;
@@ -45,11 +45,66 @@ background-color: #272727;
     height: 2vh;
   }
 
- .idFicha {
+  .idFicha {
     font-family: 'Press Start 2P', cursive;
     font-size: 8px;
     color: #484848;
     position: absolute;
     bottom: 0%;
   }
+
+  .aleatorioPalavra {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 7px;
+    color: #ffffff;
+    position: absolute;
+    position: absolute;
+    bottom: 3.5%;
+    right: 0.5%;
+  }
+
+  #aleatorioPalavraOFF {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000000;
+    font-size: 8px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 3.5%;
+    right: 0%;
+    color:#FF0000
+    
+  }
+
+  #aleatoriON {
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 7px;
+    color: #ffffff;
+    background-color: #008000;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    width: 40px;
+    height: 2vh;
+  }
+
+  #aleatoriOFF {
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 7px;
+    color: #ffffff;
+    background-color: #FF0000;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    width: 40px;
+    height: 2vh;
+  }
+
+  .visible {
+    display: block;
+  }
   
+  .hidden {
+    display: none;
+  }
