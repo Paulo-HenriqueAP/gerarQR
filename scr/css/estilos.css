@@ -63,18 +63,6 @@ background-color: #272727;
     right: 0.5%;
   }
 
-  #aleatorioPalavraOFF {
-    font-family: 'Press Start 2P', cursive;
-    background-color: #000000;
-    font-size: 8px;
-    color: #ffffff;
-    position: absolute;
-    bottom: 3.5%;
-    right: 0%;
-    color:#FF0000
-    
-  }
-
   #aleatoriON {
     cursor: pointer;
     font-family: 'Press Start 2P', cursive;
