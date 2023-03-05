@@ -1,5 +1,5 @@
 body {
-background-color: #272727;    
+background-color: #16161D;    
 }
 
 .qr {
@@ -8,7 +8,7 @@ background-color: #272727;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
+
   .gerar {
     position: absolute;
     top: 15%;
