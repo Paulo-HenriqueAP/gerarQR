@@ -45,13 +45,15 @@ aleatorioLigado.addEventListener("click", () => {
 botaoGerar.addEventListener("mouseup", function() {
     pressionado = false;
     botaoVoltar.style.color = '';
-    botaoVoltar.textContent = "FICHA ANTERIOR";
+    botaoVoltar.textContent = 'FICHA ANTERIOR';
+    botaoVoltar.style.backgroundColor = '';
 });
 
 botaoVoltar.addEventListener("mousedown", function() {
-    if (contagemFichas <= 0) {
-        botaoVoltar.style.color = '#b22222';
-        botaoVoltar.textContent = "Indisponível";
+    if (contagemFichas <= 1)  {
+        botaoVoltar.style.backgroundColor = '#8a0303';
+        botaoVoltar.style.color = '#000000';
+        botaoVoltar.textContent = "INEXISTENTE";
         return;
     }
     pressionado = true;
