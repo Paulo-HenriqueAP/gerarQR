@@ -10,7 +10,7 @@ background-color: #16161D;
   }
 
   .gerar {
-    position: absolute;
+    position: fixed;
     top: 15%;
     left: 50%;
     transform: translateX(-50%);
@@ -24,7 +24,7 @@ background-color: #16161D;
   }
   
   .gerar_anterior {
-    position: absolute;
+    position: fixed;
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);

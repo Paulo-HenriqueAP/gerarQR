@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,30 @@
     <title>QR CODE</title>
     <link rel="shortcut icon" href="./scr/css/R.ico" type="image/x-icon">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<link rel ="stylesheet" href="./scr/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scr/css/estilos.css">
+    <link rel="stylesheet" href="./scr/css/responsivo.css">
 
 </head>
 <span id="naoGerou"></span>
-<button class= "gerar">GERAR FICHA</button>
+
+<button class="gerar">GERAR FICHA</button>
 <body>
     <div class="qr">
         <iframe id="gerador" width="341" height="341" src="./scr/css/inicio.png">
         </iframe>
     </div>
     <button class="gerar_anterior">FICHA ANTERIOR</button>
-        <span class="aleatorioPalavra">Aleatório</span>
-        <button id="aleatoriON">ON</button>
-        <button id="aleatoriOFF">OFF</button>
+
+    <span class="aleatorioPalavra">Aleatório</span>
+    <button id="aleatoriON">ON</button>
+    <button id="aleatoriOFF">OFF</button>
     <div class="totalFichas">Fichas geradas: </div>
     <h1 class="idFicha">ID:</h1>
     <script src="./scr/js/index.js">
     </script>
 </body>
+
 </html>

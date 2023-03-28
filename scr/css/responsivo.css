@@ -1,0 +1,39 @@
+@media (max-height:420px) {
+
+    body {
+        max-width: fit-content;
+    }
+
+    .gerar {
+        left: 15%;
+        top: 40%;
+        width: 200px;
+        height: 60px;
+        text-align: center;
+        font-size: medium;
+    }
+
+    .gerar_anterior {
+        left: 85%;
+        top: 40%;
+        width: 200px;
+        height: 60px;
+        text-align: center;
+        font-size: medium;
+    }
+
+    .aleatorioPalavra {
+        bottom: 5%;
+
+    }
+
+    #aleatoriON {
+        height: 14px;
+
+    }
+
+    #aleatoriOFF {
+        height: 14px;
+
+    }
+}
