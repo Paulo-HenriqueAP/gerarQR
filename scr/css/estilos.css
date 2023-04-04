@@ -1,5 +1,10 @@
+html,
 body {
-background-color: #16161D;    
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #16161D;    
 }
 
 .qr {
@@ -25,7 +30,7 @@ background-color: #16161D;
   
   .gerar_anterior {
     position: fixed;
-    bottom: 15%;
+    bottom: 14%;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Press Start 2P', cursive;

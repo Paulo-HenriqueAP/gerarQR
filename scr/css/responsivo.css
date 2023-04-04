@@ -1,9 +1,5 @@
 @media (max-height:420px) {
 
-    body {
-        max-width: fit-content;
-    }
-
     .gerar {
         left: 15%;
         top: 40%;
@@ -23,7 +19,7 @@
     }
 
     .aleatorioPalavra {
-        bottom: 5%;
+        bottom: 6%;
 
     }
 
