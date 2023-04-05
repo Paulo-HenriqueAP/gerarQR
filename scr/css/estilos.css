@@ -43,11 +43,13 @@ body {
   }
 
   .totalFichas {
+    position: absolute;
     font-family: 'Press Start 2P', cursive;
     font-size: 8px;
     color: #ffffff;
     width: 170px;
     height: 2vh;
+    top: 1%;
   }
 
   .idFicha {
