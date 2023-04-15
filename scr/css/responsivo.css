@@ -1,5 +1,11 @@
 @media (max-height:420px) {
 
+    #qr {
+        width: 250px;
+        height: 250px;
+        top: 60%;
+    }
+
     #gerar {
         left: 15%;
         top: 40%;
@@ -43,6 +49,7 @@
 @media (max-width: 600px) {
     #qr_usuario {
         font-size: small;
+        top: 5%;
+        left: 1%;
     }
 }
-

@@ -107,9 +107,9 @@ body {
 }
 
 #qr_usuario {
+  position: absolute;
   width: max-content;
   font-family: 'Press Start 2P', cursive;
-  position: absolute;
   font-size: medium;
   color: #ffffff;
   right: 40%;
