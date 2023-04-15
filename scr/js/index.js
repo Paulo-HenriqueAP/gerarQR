@@ -1,71 +1,74 @@
-let botaoGerar = document.querySelector(".gerar");
-let botaoVoltar = document.querySelector(".gerar_anterior");
-let qrCode = document.getElementById("gerador");
-let sequenciaFinal = 0;
-let contagemFichas = 0;
-let pressionado = false;
-let adicionarMais = document.querySelector(".totalFichas");
-let idFicha = document.querySelector(".idFicha")
-let aleatorio = Math.floor(Math.random() * 90000 + 1001)
-const aleatorioLigado = document.getElementById("aleatoriON");
-const aleatorioDesligado = document.getElementById("aleatoriOFF");
-let aleatorioDesativado = true;
-let fichaAnterior = " ";
+// obrigado: https://dev.to/sbodi10/download-images-using-javascript-51a9
+// obrigado: https://image-charts.com/
 
-pressionado = false;
+const totalGerado = document.getElementById("totalFichas")
+let QRgerados = 0
+const gerarFicha = document.getElementById("gerar")
+let qrCode = document.getElementById("qr")
+const baixarQR = document.getElementById("baixar")
+const ligarAleatorio = document.getElementById("aleatoriOFF")
+const desligarAleatorio = document.getElementById ("aleatoriON")
+let idFichas = document.getElementById("idFicha")
 
-aleatorioLigado.addEventListener("click", () => {
-    aleatorioDesativado = true;
-    aleatorioLigado.classList.add("hidden");
-    aleatorioDesligado.classList.remove("hidden");
-  });
+/*let sites = [
+    "https://www.youtube.com/",
+    "https://www.netflix.com/browse",
+    "https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"
+] O plano é o botao aleatorio pegar um site dessa lista.*/
+
+desligarAleatorio.addEventListener("click", () => {
+    desligarAleatorio.classList.add("hidden")
+})
+
+ligarAleatorio.addEventListener("click", () => {
+    desligarAleatorio.classList.remove("hidden")
+   
+})
+
+gerarFicha.addEventListener("click", () =>{
+    qr_personalizado()
+})
+
+async function baixarQR_CODE() {
+    const QR_URL = qrCode.src; 
   
-  aleatorioDesligado.addEventListener("click", () => {
-    aleatorioDesativado = false;
-    aleatorioDesligado.classList.add("hidden");
-    aleatorioLigado.classList.remove("hidden");
-  });
+    const img = await fetch(QR_URL);
+    const imgBlob = await img.blob(); 
   
-  botaoGerar.addEventListener("mousedown", function() {
-    pressionado = true;
-    contagemFichas = contagemFichas + 1;
-    adicionarMais.textContent = "Fichas geradas: " + contagemFichas;
-    if (aleatorioDesativado) {
-        sequenciaFinal = sequenciaFinal + 1;
-        fichaAnterior = sequenciaFinal - 1
-        qrCode.setAttribute("src", "https://image-charts.com/chart?chs=252x252&cht=qr&chl= " + "0221512070160715" + sequenciaFinal + "&choe=UTF-8");
-        idFicha.textContent = "ID: 0221512070160715" + sequenciaFinal;
-    } else {
-        fichaAnterior = aleatorio;
-        aleatorio = Math.floor(Math.random() * 90000+ 1001)
-        qrCode.setAttribute("src", "https://image-charts.com/chart?chs=252x252&cht=qr&chl= " + "022151207016" + aleatorio + "&choe=UTF-8");
-        idFicha.textContent = "ID: 022151207016" + aleatorio;
-    }
-});
-botaoGerar.addEventListener("mouseup", function() {
-    pressionado = false;
-    botaoVoltar.style.color = '';
-    botaoVoltar.textContent = 'FICHA ANTERIOR';
-    botaoVoltar.style.backgroundColor = '';
-});
+    const objectURL = URL.createObjectURL(imgBlob); 
+  
+    const link = document.createElement('a');
+    link.href = objectURL;
+    link.download = ("QR ;)")
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  
+    URL.revokeObjectURL(objectURL); 
+  }
+  
 
-botaoVoltar.addEventListener("mousedown", function() {
-    if (contagemFichas <= 1)  {
-        botaoVoltar.style.backgroundColor = '#8a0303';
-        botaoVoltar.style.color = '#000000';
-        botaoVoltar.textContent = "INEXISTENTE";
+baixarQR.addEventListener("click", () => {
+    baixarQR_CODE()
+})
+
+function qr_personalizado() {
+    totalGerado.textContent=("Gerou: " + QRgerados + " QR codes");
+
+    let textoUser = document.getElementById("texto_usuario").value;
+    console.log(qrCode)
+    if (textoUser === "gerarFICHAS") {
+        numAleatorio = Math.floor(Math.random() * 1000000);
+        qrCode.setAttribute("src", "https://image-charts.com/chart?chs=250x250&cht=qr&chl=022151207016" + numAleatorio + "choe=UTF-8");
+        idFichas.textContent = ("ID: 022151207016" + numAleatorio)
         return;
     }
-    pressionado = true;
-    if (aleatorioDesativado) {
-        qrCode.setAttribute("src", "https://image-charts.com/chart?chs=252x252&cht=qr&chl= " + "0221512070160715" + fichaAnterior + "&choe=UTF-8")
-        idFicha.textContent = "ID: 0221512070160715" + fichaAnterior
-    } else {
-        qrCode.setAttribute("src", "https://image-charts.com/chart?chs=252x252&cht=qr&chl= " + "022151207016" + fichaAnterior + "&choe=UTF-8")
-        idFicha.textContent = "ID: 022151207016" + fichaAnterior
-    }
-    });
 
-botaoVoltar.addEventListener("mouseup", function() {
-    pressionado = false;
-});
+    if (textoUser != "") {
+        qrCode.setAttribute("src", "https://image-charts.com/chart?chs=250x250&cht=qr&chl=" + textoUser);
+        QRgerados++;
+    } else {
+        qrCode.setAttribute("src", "scr/inicio/inicio2.png");
+        qr_usuario.classList.toggle("nada")
+    }
+}

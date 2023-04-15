@@ -1,105 +1,131 @@
 html,
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #16161D;    
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #16161D;
+  font-family: 'Press Start 2P', cursive;
 }
 
-.qr {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#qr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min-content;
+  border-radius: 15px;
+}
+
+#gerar {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  background-color: #00a000;
+  color: #ffffff;
+  cursor: pointer;
+  width: 350px;
+  height: 9vh;
+}
+
+#baixar {
+  position: fixed;
+  bottom: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  background-color: #505050;
+  color: #ffffff;
+  cursor: pointer;
+  width: 350px;
+  height: 10vh;
+}
+
+#totalFichas {
+  position: absolute;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+  color: #ffffff;
+  width: 170px;
+  height: 2vh;
+  top: 1%;
+  left: 1%;
+}
+
+#idFicha {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+  color: #484848;
+  position: absolute;
+  bottom: 0%;
+}
+
+#aleatorioPalavra {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 7px;
+  color: #ffffff;
+  position: absolute;
+  position: absolute;
+  bottom: 3.5%;
+  right: 1%;
+}
+
+#aleatoriON {
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 7px;
+  color: #ffffff;
+  background-color: #008000;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  width: 40px;
+  height: 2vh;
+}
+
+#aleatoriOFF {
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 7px;
+  color: #ffffff;
+  background-color: #FF0000;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  width: 40px;
+  height: 2vh;
+}
+
+.hidden {
+  display: none;
+}
+
+#qr_usuario {
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  font-size: medium;
+  color: #ffffff;
+  right: 40%;
+  top: 5%;
+}
+
+.nada {
+  animation-duration: 0.4s;
+  animation-name: vazio;
+}
+
+@keyframes vazio {
+  5% {
+    top: 5%;
+    ;
   }
 
-  .gerar {
-    position: fixed;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Press Start 2P', cursive;
-    font-size: 20px;
-    background-color: #00a000;
-    color: #ffffff;
-    cursor: pointer;
-    width: 350px;
-    height: 9vh;
+  5% {
+    background-color: red;
+    top: 8%;
   }
-  
-  .gerar_anterior {
-    position: fixed;
-    bottom: 14%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Press Start 2P', cursive;
-    font-size: 20px;
-    background-color: #505050;
-    color: #ffffff;
-    cursor: pointer;
-    width: 350px;
-    height: 10vh;
-  }
-
-  .totalFichas {
-    position: absolute;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 8px;
-    color: #ffffff;
-    width: 170px;
-    height: 2vh;
-    top: 1%;
-  }
-
-  .idFicha {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 8px;
-    color: #484848;
-    position: absolute;
-    bottom: 0%;
-  }
-
-  .aleatorioPalavra {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 7px;
-    color: #ffffff;
-    position: absolute;
-    position: absolute;
-    bottom: 3.5%;
-    right: 1%;
-  }
-
-  #aleatoriON {
-    cursor: pointer;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 7px;
-    color: #ffffff;
-    background-color: #008000;
-    position: absolute;
-    bottom: 1%;
-    right: 1%;
-    width: 40px;
-    height: 2vh;
-  }
-
-  #aleatoriOFF {
-    cursor: pointer;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 7px;
-    color: #ffffff;
-    background-color: #FF0000;
-    position: absolute;
-    bottom: 1%;
-    right: 1%;
-    width: 40px;
-    height: 2vh;
-  }
-
-  .visible {
-    display: block;
-  }
-  
-  .hidden {
-    display: none;
-  }
+}

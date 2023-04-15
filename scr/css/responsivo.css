@@ -1,6 +1,11 @@
 @media (max-height:420px) {
 
-    .gerar {
+    #qr {
+        width: 250px;
+        height: 250px;
+    }
+
+    #gerar {
         left: 15%;
         top: 40%;
         width: 200px;
@@ -9,7 +14,7 @@
         font-size: medium;
     }
 
-    .gerar_anterior {
+    #baixar {
         left: 85%;
         top: 40%;
         width: 200px;
@@ -18,7 +23,7 @@
         font-size: medium;
     }
 
-    .aleatorioPalavra {
+    #aleatorioPalavra {
         bottom: 6%;
 
     }
@@ -32,4 +37,15 @@
         height: 14px;
 
     }
+
+    #qr_usuario {
+        font-size: small;
+    }
 }
+
+@media (max-width: 600px) {
+    #qr_usuario {
+        font-size: small;
+    }
+}
+

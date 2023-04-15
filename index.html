@@ -16,23 +16,27 @@
 
 </head>
 
-<span id="naoGerou"></span>
-
-<button class="gerar">GERAR FICHA</button>
 <body>
-    <div class="qr">
-        <iframe id="gerador" width="341" height="341" src="./scr/css/inicio.png">
-        </iframe>
-    </div>
-    <button class="gerar_anterior">FICHA ANTERIOR</button>
 
-    <span class="aleatorioPalavra">Aleatório</span>
-    <button id="aleatoriON">ON</button>
-    <button id="aleatoriOFF">OFF</button>
-    <div class="totalFichas">Fichas geradas: </div>
-    <h1 class="idFicha">ID:</h1>
-    <script src="./scr/js/index.js">
-    </script>
+    <div id="qr_usuario">Escreva algo: 
+        <input id="texto_usuario" type="text" onchange="qr_personalizado()">
+    </div>
+
+    <button id="gerar">GERAR</button>
+    <img id="qr" src="scr/inicio/inicio1.png"></img>
+    <button id="baixar">DOWNLOAD</button>
+
+
+    <button id="aleatoriOFF">ON</button>
+    <span id="aleatorioPalavra">Aleatório</span>
+    <button id="aleatoriON">OFF</button>
+
+    <span id="totalFichas"></span>
+
+    <span id="idFicha"></span>
+
+    <script src="./scr/js/index.js"></script>
+
 </body>
 
 </html>
