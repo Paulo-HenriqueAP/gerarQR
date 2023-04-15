@@ -1,10 +1,5 @@
 @media (max-height:420px) {
 
-    #qr {
-        width: 250px;
-        height: 250px;
-    }
-
     #gerar {
         left: 15%;
         top: 40%;
