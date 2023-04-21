@@ -13,7 +13,38 @@ let qrRepetido = "";
 let aleatorio = false;
 let nomeURL = "";
 
-// O texto que qualquer pessoa colocar entra nessa lista. É possível?
+/*const dominios = [
+    ".com", ".org",
+    ".gov",".net",
+    ".edu", ".mil",
+    ".info", ".io",
+    ".me", ".tv",
+    ".com", ".com",
+    ".com", ".com"
+]
+
+O texto personalizado entra nessa lista. É possível?
+
+const palavras_chave = [
+    "apple", "google", "facebook", "amazon", "netflix",
+    "uber", "lyft", "airbnb", "linkedin", "reddit",
+    "twitter", "instagram", "twitch", "snapchat", "spotify",
+    "paypal", "zoom", "skype", "pinterest", "tiktok",
+    "tesla", "nvidia", "amd", "intel", "microsoft",
+    "dell", "hp", "lenovo", "oracle", "ibm",
+    "walmart", "mcdonalds", "coca-cola", "pepsi", "nike",
+    "adidas", "puma", "reebok", "starbucks", "dunkin",
+    "chipotle", "wendys", "dominos", "pizza-hut", "subway",
+    "panera", "whole-foods", "costco", "target", "walmart",
+    "hulu", "disney", "cbs", "hbo", "amazon-prime",
+    "nintendo", "sony", "microsoft-xbox", "steam", "epic-games",
+    "github", "bitbucket", "atlassian", "trello", "jira",
+    "reddit", "tumblr", "flickr", "imgur", "deviantart",
+    "foursquare", "yelp", "tripadvisor", "booking", "expedia",
+    "indeed", "glassdoor", "linkedin-jobs", "monster", "ziprecruiter",
+    "goldman-sachs", "jpmorgan", "morgan-stanley", "bank-of-america", "citibank",
+    "ford", "gm", "toyota", "honda", "tesla-motors"
+  ];*/
 
 const sites = [
     "google.com", "youtube.com", "facebook.com", "yahoo.com", "wikipedia.org",
@@ -332,8 +363,8 @@ function qr_personalizado() {
 
     if (textoUser === "gerarFICHAS") {
         numAleatorio = Math.floor(Math.random() * 1000000);
-        qrCode.setAttribute("src", "https://image-charts.com/chart?chs=250x250&cht=qr&chl=022151207016" + numAleatorio + "choe=UTF-8");
-        idFichas.textContent = ("ID: 022151207016" + numAleatorio)
+        qrCode.setAttribute("src", "https://image-charts.com/chart?chs=250x250&cht=qr&chl=02215120701" + numAleatorio + "choe=UTF-8");
+        idFichas.textContent = ("ID: 02215120701" + numAleatorio)
         nomeURL = "ID: 022151207016" + numAleatorio
         return;
     }
