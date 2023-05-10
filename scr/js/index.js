@@ -8,7 +8,6 @@ let qrCode = document.getElementById("qr");
 const baixarQR = document.getElementById("baixar");
 const ligarAleatorio = document.getElementById("aleatoriOFF");
 const desligarAleatorio = document.getElementById("aleatoriON");
-let idFichas = document.getElementById("idFicha");
 let qrRepetido = "";
 let aleatorio = false;
 let nomeURL = "";
@@ -359,15 +358,6 @@ baixarQR.addEventListener("click", () => {
 function qr_personalizado() {
     totalGerado.textContent = ("");
     let textoUser = document.getElementById("texto_usuario").value;
-    console.log(qrCode)
-
-    if (textoUser === "gerarFICHAS") {
-        numAleatorio = Math.floor(Math.random() * 1000000);
-        qrCode.setAttribute("src", "https://image-charts.com/chart?chs=250x250&cht=qr&chl=02215120701" + numAleatorio + "choe=UTF-8");
-        idFichas.textContent = ("ID: 02215120701" + numAleatorio)
-        nomeURL = "ID: 022151207016" + numAleatorio
-        return;
-    }
 
     if (textoUser != "") {
         qrCode.setAttribute("src", "https://image-charts.com/chart?chs=250x250&cht=qr&chl=" + textoUser);
