@@ -1,9 +1,7 @@
 // obrigado: https://dev.to/sbodi10/download-images-using-javascript-51a9
 // obrigado: https://image-charts.com/
 
-const totalGerado = document.getElementById("totalFichas");
-let QRgerados = 0;
-const gerarFicha = document.getElementById("gerar");
+const gerar = document.getElementById("gerar");
 let qrCode = document.getElementById("qr");
 const baixarQR = document.getElementById("baixar");
 const ligarAleatorio = document.getElementById("aleatoriOFF");
@@ -323,7 +321,6 @@ async function baixarQR_CODE() {
     URL.revokeObjectURL(objectURL);
 }
 
-
 desligarAleatorio.addEventListener("click", () => {
     desligarAleatorio.classList.add("hidden")
     aleatorio = true
@@ -336,16 +333,12 @@ ligarAleatorio.addEventListener("click", () => {
     qr_usuario.classList.remove("hidden")
 })
 
-gerarFicha.addEventListener("click", () => {
+gerar.addEventListener("click", () => {
     if (aleatorio === true) {
-        QRgerados++
-        totalGerado.textContent = ("Gerou: " + QRgerados + " QR codes");
         const qr_Aleatorio = Math.floor(Math.random() * sites.length);
         const qr_Escolhido = sites[qr_Aleatorio];
         nomeURL = "#".repeat(qr_Escolhido.length - 4);
-        console.log(nomeURL)
         qrCode.setAttribute("src", "https://image-charts.com/chart?chs=250x250&cht=qr&chl=" + qr_Escolhido)
-        console.log(qrCode)
         return;
     }
     qr_personalizado()
@@ -356,7 +349,6 @@ baixarQR.addEventListener("click", () => {
 })
 
 function qr_personalizado() {
-    totalGerado.textContent = ("");
     let textoUser = document.getElementById("texto_usuario").value;
 
     if (textoUser != "") {

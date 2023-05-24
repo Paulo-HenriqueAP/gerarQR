@@ -24,19 +24,12 @@
         font-size: medium;
     }
 
-    #aleatorioPalavra {
-        bottom: 6%;
-
-    }
-
     #aleatoriON {
         height: 14px;
-
     }
 
     #aleatoriOFF {
         height: 14px;
-
     }
 
     #qr_usuario {

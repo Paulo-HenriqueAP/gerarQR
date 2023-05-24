@@ -47,34 +47,6 @@ body {
   height: 10vh;
 }
 
-#totalFichas {
-  position: absolute;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 8px;
-  color: #484848;
-  width: 170px;
-  height: 2vh;
-  top: 1%;
-  left: 1%;
-}
-
-#idFicha {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 8px;
-  color: #484848;
-  position: absolute;
-  bottom: 0.5%;
-}
-
-#aleatorioPalavra {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 7px;
-  color: #ffffff;
-  position: absolute;
-  position: absolute;
-  bottom: 3.5%;
-  right: 1%;
-}
 
 #aleatoriON {
   cursor: pointer;
@@ -85,7 +57,7 @@ body {
   position: absolute;
   bottom: 1%;
   right: 1%;
-  width: 40px;
+  width: fit-content;
   height: 2vh;
 }
 
@@ -98,7 +70,7 @@ body {
   position: absolute;
   bottom: 1%;
   right: 1%;
-  width: 40px;
+  width: fit-content;
   height: 2vh;
 }
 
