@@ -21,4 +21,8 @@
     #texto_usuario {
         top: 10%;
       }
+
+      #escrevaAlgo {
+        font-size: medium;
+      }
 }
