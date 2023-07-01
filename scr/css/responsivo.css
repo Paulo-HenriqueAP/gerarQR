@@ -1,14 +1,8 @@
 @media (max-height:420px) {
 
-    #qr {
-        width: 250px;
-        height: 250px;
-        top: 60%;
-    }
-
     #gerar {
         left: 15%;
-        top: 40%;
+        top: 50%;
         width: 200px;
         height: 60px;
         text-align: center;
@@ -17,11 +11,14 @@
 
     #baixar {
         left: 85%;
-        top: 40%;
+        top: 50%;
         width: 200px;
         height: 60px;
         text-align: center;
         font-size: medium;
     }
-
+    
+    #texto_usuario {
+        top: 10%;
+      }
 }

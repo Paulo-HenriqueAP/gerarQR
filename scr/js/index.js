@@ -8,7 +8,7 @@ const ligarAleatorio = document.getElementById("aleatoriOFF");
 const desligarAleatorio = document.getElementById("aleatoriON");
 let aleatorio = false;
 let nomeURL = "";
-
+let escreva = document.getElementById("escrevaAlgo")
 
 //O texto personalizado entra nessa lista. É possível?
 
@@ -295,13 +295,15 @@ async function baixarQR_CODE() {
 desligarAleatorio.addEventListener("click", () => {
     desligarAleatorio.classList.add("hidden");
     aleatorio = true;
-    escrevaAlgo.classList.add("hidden"); texto_usuario.classList.add("hidden");
+    texto_usuario.classList.add("hidden");
+    escreva.textContent= "Aleatório ligado 🔀"
 });
 
 ligarAleatorio.addEventListener("click", () => {
     desligarAleatorio.classList.remove("hidden");
     aleatorio = false;
-    escrevaAlgo.classList.remove("hidden"); texto_usuario.classList.remove("hidden");
+    texto_usuario.classList.remove("hidden");
+    escreva.textContent= "↶ Escreva algo ↷"
 })
 
 gerar.addEventListener("click", () => {
