@@ -293,14 +293,16 @@ async function baixarQR_CODE() {
 };
 
 desligarAleatorio.addEventListener("click", () => {
-    desligarAleatorio.classList.add("hidden");
+    desligarAleatorio.classList.toggle("hidden");
+    ligarAleatorio.classList.toggle("hidden");
     aleatorio = true;
     texto_usuario.classList.add("hidden");
     escreva.textContent= "Aleatório ligado 🔀"
 });
 
 ligarAleatorio.addEventListener("click", () => {
-    desligarAleatorio.classList.remove("hidden");
+    desligarAleatorio.classList.toggle("hidden");
+    ligarAleatorio.classList.toggle("hidden");
     aleatorio = false;
     texto_usuario.classList.remove("hidden");
     escreva.textContent= "↶ Escreva algo ↷"

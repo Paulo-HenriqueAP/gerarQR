@@ -48,26 +48,25 @@ body {
   height: 10%;
 }
 
+button:hover {
+  opacity: 70%;
+}
 
 #aleatoriON {
-  cursor: pointer;
   background-color: #FF0000;
   position: fixed;
   bottom: 1%;
-  right: 1%;
-  padding: 1px;
-  font-size: medium;
+  left: 1%;
+  cursor: pointer;
 }
 
 #aleatoriOFF {
-  font-size: medium;
   cursor: pointer;
   color: #ffffff;
   background-color: #008000;
   position: fixed;
   bottom: 1%;
-  right: 1%;
-  padding: 0;
+  left: 1%;
 }
 
 .hidden {
