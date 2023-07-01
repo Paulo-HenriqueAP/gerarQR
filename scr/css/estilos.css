@@ -56,8 +56,10 @@ button:hover {
   background-color: #FF0000;
   position: fixed;
   bottom: 1%;
-  left: 1%;
+  right: 1%;
   cursor: pointer;
+  font-size: medium;
+  padding: 0;
 }
 
 #aleatoriOFF {
@@ -66,7 +68,9 @@ button:hover {
   background-color: #008000;
   position: fixed;
   bottom: 1%;
-  left: 1%;
+  right: 1%;
+  font-size: medium;
+  padding: 0;
 }
 
 .hidden {
