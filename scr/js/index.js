@@ -6,42 +6,11 @@ let qrCode = document.getElementById("qr");
 const baixarQR = document.getElementById("baixar");
 const ligarAleatorio = document.getElementById("aleatoriOFF");
 const desligarAleatorio = document.getElementById("aleatoriON");
-let qrRepetido = "";
 let aleatorio = false;
 let nomeURL = "";
 
-/*const dominios = [
-    ".com", ".org",
-    ".gov",".net",
-    ".edu", ".mil",
-    ".info", ".io",
-    ".me", ".tv",
-    ".com", ".com",
-    ".com", ".com"
-]
 
-O texto personalizado entra nessa lista. É possível?
-
-const palavras_chave = [
-    "apple", "google", "facebook", "amazon", "netflix",
-    "uber", "lyft", "airbnb", "linkedin", "reddit",
-    "twitter", "instagram", "twitch", "snapchat", "spotify",
-    "paypal", "zoom", "skype", "pinterest", "tiktok",
-    "tesla", "nvidia", "amd", "intel", "microsoft",
-    "dell", "hp", "lenovo", "oracle", "ibm",
-    "walmart", "mcdonalds", "coca-cola", "pepsi", "nike",
-    "adidas", "puma", "reebok", "starbucks", "dunkin",
-    "chipotle", "wendys", "dominos", "pizza-hut", "subway",
-    "panera", "whole-foods", "costco", "target", "walmart",
-    "hulu", "disney", "cbs", "hbo", "amazon-prime",
-    "nintendo", "sony", "microsoft-xbox", "steam", "epic-games",
-    "github", "bitbucket", "atlassian", "trello", "jira",
-    "reddit", "tumblr", "flickr", "imgur", "deviantart",
-    "foursquare", "yelp", "tripadvisor", "booking", "expedia",
-    "indeed", "glassdoor", "linkedin-jobs", "monster", "ziprecruiter",
-    "goldman-sachs", "jpmorgan", "morgan-stanley", "bank-of-america", "citibank",
-    "ford", "gm", "toyota", "honda", "tesla-motors"
-  ];*/
+//O texto personalizado entra nessa lista. É possível?
 
 const sites = [
     "google.com", "youtube.com", "facebook.com", "yahoo.com", "wikipedia.org",
@@ -303,6 +272,8 @@ const sites = [
     "timesofisrael.com", "jpost.com", "haaretz.com"
 ];
 
+escrevaAlgo.classList.toggle("nada"); texto_usuario.classList.toggle("nada");
+
 async function baixarQR_CODE() {
     const QR_URL = qrCode.src;
 
@@ -313,24 +284,24 @@ async function baixarQR_CODE() {
 
     const link = document.createElement('a');
     link.href = objectURL;
-    link.download = ("QR_" + nomeURL + ".png")
+    link.download = ("QR_" + nomeURL + ".png");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 
     URL.revokeObjectURL(objectURL);
-}
+};
 
 desligarAleatorio.addEventListener("click", () => {
-    desligarAleatorio.classList.add("hidden")
-    aleatorio = true
-    qr_usuario.classList.add("hidden")
-})
+    desligarAleatorio.classList.add("hidden");
+    aleatorio = true;
+    escrevaAlgo.classList.add("hidden"); texto_usuario.classList.add("hidden");
+});
 
 ligarAleatorio.addEventListener("click", () => {
-    desligarAleatorio.classList.remove("hidden")
-    aleatorio = false
-    qr_usuario.classList.remove("hidden")
+    desligarAleatorio.classList.remove("hidden");
+    aleatorio = false;
+    escrevaAlgo.classList.remove("hidden"); texto_usuario.classList.remove("hidden");
 })
 
 gerar.addEventListener("click", () => {
@@ -338,15 +309,15 @@ gerar.addEventListener("click", () => {
         const qr_Aleatorio = Math.floor(Math.random() * sites.length);
         const qr_Escolhido = sites[qr_Aleatorio];
         nomeURL = "#".repeat(qr_Escolhido.length - 4);
-        qrCode.setAttribute("src", "https://image-charts.com/chart?chs=250x250&cht=qr&chl=" + qr_Escolhido)
+        qrCode.setAttribute("src", "https://image-charts.com/chart?chs=250x250&cht=qr&chl=" + qr_Escolhido);
         return;
-    }
-    qr_personalizado()
-})
+    };
+    qr_personalizado();
+});
 
 baixarQR.addEventListener("click", () => {
-    baixarQR_CODE()
-})
+    baixarQR_CODE();
+});
 
 function qr_personalizado() {
     let textoUser = document.getElementById("texto_usuario").value;
@@ -355,7 +326,7 @@ function qr_personalizado() {
         qrCode.setAttribute("src", "https://image-charts.com/chart?chs=250x250&cht=qr&chl=" + textoUser);
     } else {
         qrCode.setAttribute("src", "scr/inicio/inicio2.png");
-        qr_usuario.classList.toggle("nada")
+        escrevaAlgo.classList.toggle("nada"); texto_usuario.classList.toggle("nada");
     }
-    nomeURL = textoUser
-}
+    nomeURL = textoUser;
+};

@@ -24,25 +24,4 @@
         font-size: medium;
     }
 
-    #aleatoriON {
-        height: 14px;
-    }
-
-    #aleatoriOFF {
-        height: 14px;
-    }
-
-    #qr_usuario {
-        font-size: small;
-        top: 1%;
-        right: 30%;
-    }
-}
-
-@media (max-width: 600px) {
-    #qr_usuario {
-        font-size: small;
-        top: 5%;
-        left: 1%;
-    }
 }

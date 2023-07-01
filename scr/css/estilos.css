@@ -9,7 +9,7 @@ body {
 }
 
 #qr {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -49,62 +49,60 @@ body {
 
 
 #aleatoriON {
+  font-size: large;
   cursor: pointer;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 7px;
   color: #ffffff;
   background-color: #FF0000;
-  position: absolute;
+  position: fixed;
   bottom: 1%;
   right: 1%;
-  width: fit-content;
-  height: 2vh;
 }
 
 #aleatoriOFF {
+  font-size: large;
   cursor: pointer;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 7px;
   color: #ffffff;
   background-color: #008000;
-  position: absolute;
+  position: fixed;
   bottom: 1%;
   right: 1%;
-  width: fit-content;
-  height: 2vh;
 }
 
 .hidden {
   display: none;
 }
 
-#qr_usuario {
-  position: absolute;
-  width: max-content;
-  font-family: 'Press Start 2P', cursive;
-  font-size: medium;
+#escrevaAlgo {
+  position: fixed;
+  font-size: large;
   color: #ffffff;
-  right: 40%;
-  top: 5%;
+  top: 1%;
+  transform: translate(-50%);
+  left: 50%;
+  width: max-content;
+  user-select: none;
 }
 
 .nada {
-  animation-duration: 0.4s;
+  animation-duration: 0.5s;
   animation-name: vazio;
 }
 
 @keyframes vazio {
   5% {
     top: 5%;
-    ;
   }
 
   5% {
     background-color: red;
-    top: 8%;
   }
 }
 
 #texto_usuario {
+  position: fixed;
   color: #008000;
+  top: 7%;
+  transform: translate(-50%);
+  left: 50%;
+  width: 90%;
 }
