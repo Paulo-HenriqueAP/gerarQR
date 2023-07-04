@@ -1,36 +1,33 @@
 @media (max-height:420px) {
 
-    #gerar {
-        left: 15%;
-        top: 50%;
-        width: 200px;
-        height: 60px;
-        text-align: center;
-        font-size: medium;
-    }
+  #texto_usuario {
+    top: 14%;
+  }
 
-    #baixar {
-        left: 85%;
-        top: 50%;
-        width: 200px;
-        height: 60px;
-        text-align: center;
-        font-size: medium;
-    }
-    
-    #texto_usuario {
-        top: 13%;
-      }
+  #escrevaAlgo {
+    font-size: small;
+  }
 
-      #escrevaAlgo {
-        font-size: medium;
-      }
+  .conteudo {
+    display: inline-flex;
+    align-items: center;
+    background-color: aqua;
+    height: 0%;
+    bottom: 0%;
+  }
 
-      #qr {
-        width: 200px;
-        height: 200px;
-      }
+  #gerar {
+    width: 200px;
+    height: 70px;
+  }
 
-      
+  #baixar {
+    width: 200px;
+    height: 70px;
+  }
 
+  #qr {
+    width: 200px;
+    height: 200px;
+  }
 }

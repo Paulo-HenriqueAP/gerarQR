@@ -16,18 +16,17 @@
     <link rel="stylesheet" href="./scr/css/responsivo.css">
 
 </head>
-
+    <ul class="conteudo">
+        <li> <button id="gerar">GERAR QR</button></li>
+        <li> <img id="qr" src="scr/inicio/inicio1.png"></img></li>
+        <li> <button id="baixar">BAIXAR QR</button></li>
+    </ul>
 <body>
     <span id="escrevaAlgo">↶ Escreva algo ↷</span>
-        <input id="texto_usuario" type="text" onchange="qr_personalizado()">
+        <input id="texto_usuario" type="text" onchange="qr_personalizado()" placeholder="Aqui">
 
-    <button id="gerar">GERAR QR</button>
-        <img id="qr" src="scr/inicio/inicio1.png"></img>
-    <button id="baixar">BAIXAR QR</button>
-
-
-    <button id="aleatoriOFF" class="hidden">🦖</button>
-    <button id="aleatoriON">☄️</button>
+    <button id="aleatoriOFF" class="hidden">🛡️</button>
+    <button id="aleatoriON">⚔️</button>
 
     <script src="./scr/js/index.js"></script>
 </body>
