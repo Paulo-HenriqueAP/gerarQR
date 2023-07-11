@@ -1,4 +1,4 @@
-# gerarQR
+# gerarQR -  https://paulo-henriqueap.github.io/gerarQR/
 
 Gere QR codes de maneira simples e faça o download deles.
 Tem também uma opção que gera 'aleatoriamente'.
